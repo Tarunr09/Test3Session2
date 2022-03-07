@@ -1,1 +1,29 @@
-
+Breakpoint 1, main () at p3final.c:30
+30  {
+(gdb) n
+32    input(&n,&r);
+(gdb) s
+input (n=0x7fff473e19dc, r=0x7fff473e19e0) at p3final.c:4
+4     printf("Enter the value of n and r:\n");
+(gdb) n
+Enter the value of n and r:
+5     scanf("%d%d",n,r);
+(gdb) n
+5 2
+6   }
+(gdb) n
+main () at p3final.c:33
+33    x=ncr(n,r);
+(gdb) n
+34    output(n,r,x);
+(gdb) s
+output (n=5, r=2, ncr=10) at p3final.c:26
+26    printf("Value of %dC%d = %d\n",n,r,ncr);
+(gdb) n
+Value of 5C2 = 10
+27  }
+(gdb) n
+main () at p3final.c:35
+35    return 0;
+(gdb) n
+36  }(gdb)

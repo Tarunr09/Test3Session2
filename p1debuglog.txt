@@ -1,1 +1,54 @@
-
+Breakpoint 1, main () at p1final.c:28
+28  {
+(gdb) n
+30    input(&num1, &den1, &num2, &den2);
+(gdb) s
+input (num1=0x7ffda559e860, den1=0x7ffda559e864, num2=0x7ffda559e868, 
+    den2=0x7ffda559e86c) at p1final.c:5
+5     printf("Enter the fraction number:");
+(gdb) n
+6     scanf("%d%d%d%d",num1,den1,num2,den2);
+(gdb) 1 4 1 2
+Undefined command: "1".  Try "help".
+(gdb) n
+Enter the fraction number:1 2
+1 4
+7   }
+(gdb) n
+main () at p1final.c:31
+31    add(num1, den1, num2, den2, &num3, &den3);
+(gdb) s
+add (num1=1, den1=2, num2=1, den2=4, num3=0x7ffda559e870, den3=0x7ffda559e874)
+    at p1final.c:11
+11     *num3=(num1*den2)+(num2*den1);
+(gdb) n
+12     *den3=den1*den2;
+(gdb) n
+14    for(int i=2;i<=*num3;i++){
+(gdb) n
+15      if(*num3%i==0 && *den3%i==0){
+(gdb) n
+16        *num3=*num3/i;
+(gdb) n
+17        *den3=*den3/i;
+(gdb) n
+14    for(int i=2;i<=*num3;i++){
+(gdb) n
+15      if(*num3%i==0 && *den3%i==0){
+(gdb) n
+14    for(int i=2;i<=*num3;i++){
+(gdb) n
+20  }
+(gdb) n
+main () at p1final.c:32
+32    output(num3,den3);
+(gdb) s
+output (num3=3, den3=4) at p1final.c:24
+24    printf("Sum of 2 fractions is %d/%d",num3,den3);
+(gdb) n
+25  }
+(gdb) n
+main () at p1final.c:33
+33    return 0;
+(gdb) n
+34  }
